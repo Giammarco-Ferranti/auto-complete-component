@@ -1,0 +1,18 @@
+.searchbar-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  max-height: 300px;
+  overflow: hidden;
+  gap: 10px;
+  padding: 20px;
+}
+
+@media screen and (max-width: 500px) {
+  .searchbar-wrapper {
+    max-width: 300px;
+  }
+}
