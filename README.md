@@ -1,54 +1,67 @@
-# React + TypeScript + Vite
+Auto-Complete Component
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Setup and Installation
 
-Currently, two official plugins are available:
+Prerequisites
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Ensure you have the following installed on your system:
 
-## Expanding the ESLint configuration
+Node.js (latest LTS recommended)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+npm or yarn
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Installation Steps
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Clone the repository:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+git clone https://github.com/yourusername/autocomplete-component.git
+cd autocomplete-component
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Install dependencies:
+
+npm install
+
+or if using yarn:
+
+yarn install
+
+Run the development server:
+
+npm run dev
+
+or:
+
+yarn dev
+
+Open the application in your browser:
+
+http://localhost:3000
+
+Tools and Libraries Used
+
+React (Functional components with Hooks)
+
+TypeScript (For type safety and maintainability)
+
+CSS (Minimal styling for a clean UI)
+
+No third-party libraries were used, as per the task requirements.
+
+Assumptions & Design Decisions
+
+Performance Optimization: The component is built with efficiency in mind, ensuring smooth user experience.
+
+No External State Management: Only React's built-in state management is used.
+
+Asynchronous Data Handling: The filtering function simulates an asynchronous API call using setTimeout.
+
+Mock Data: The component filters data from a predefined JSON array to mimic real-world usage.
+
+Text Highlighting: The input query is highlighted within search results to improve visibility.
+
+Edge Cases Handled: Ensures proper behavior for empty queries, rapid input changes, and non-matching searches.
+
+Bonus Feature: The component can be easily adapted to fetch real API data.
+
+
+
