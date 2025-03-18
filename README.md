@@ -38,6 +38,24 @@ npm run dev
 ```
 
 
+## Assumptions and Design Decisions
+
+### Assumptions
+- The user types at least one character before suggestions appear.
+- The mock data simulates API behavior for local testing without internet dependency.
+- The component is designed for a React app using state management via `useState`. No external state management.
+- The Datamuse API returns valid results in a predictable format.
+
+### Design Decisions
+- **Vite for Development**: Chosen for its faster build times over Create React App.
+- **Mock Data + API Option**: Allows local testing without relying on Datamuse API.
+- **Auto-close on Click Outside**: Improves UX by closing the suggestion box when clicking elsewhere.
+- **Filtering with `startsWith`**: Ensures relevant and fast suggestions.
+- **300ms Mock Data Delay**: Simulates real API latency for a more realistic experience.
+- **API Error Handling**: Displays an error message and closes the suggestions box if the API fails.
+- **300ms Delay on FetchData**: Introduced to minimize API calls and enhance performance by handling rapid user input efficiently.
+
+
 ## Usage/Configuration
 
 To use the Datamuse API, modify SearchBar.tsx by commenting out the mock data section and uncommenting the API request:
