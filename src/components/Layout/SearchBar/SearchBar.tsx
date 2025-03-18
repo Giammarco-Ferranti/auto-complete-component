@@ -74,6 +74,7 @@ const SearchBar = () => {
     }
   }, [query]);
 
+  //Change modal status if user click outside of div
   const handleModalStatusChange = (event: MouseEvent) => {
     if (listRef.current && !listRef.current.contains(event.target as Node))
       setSearchListModal(false);
